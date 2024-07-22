@@ -7,7 +7,7 @@
 ```
 oc create quota memory --hard=requests.memory=1Gi,limits.memory=2Gi -n template-builder
 ```
-3. Each workload in the project has the following properties:
+4. Each workload in the project has the following properties:
   
 ```
 Default memory request of 256 MiB  
@@ -45,7 +45,7 @@ oc scale --replicas=10 deployment/test-limits
 
 oc get all
 ```
-4. Create a project temlate definition with the same properties
+5. Create a project template definition with the same properties
 - create bootstrap template
 ```
 $ oc adm create-bootstrap-project-template -o yaml >template.yaml
@@ -67,7 +67,7 @@ status
 ```
 (see: `template-example.yaml` for example results)  
 
-5. Create and configure the project template
+6. Create and configure the project template
 - create in `openshift-config` namespace
 
 ```
@@ -92,4 +92,4 @@ spec:
 ```
 watch oc get pod -n openshift-apiserver
 ```
-6. Create a project to make sure it works as intended and check `resourcequotas` and `limitranges` to see if present
+7. Create a project to make sure it works as intended and check `resourcequotas` and `limitranges` to see if present
