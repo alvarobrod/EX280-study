@@ -13,35 +13,35 @@
 2. Use htpasswd to create account logins
 
 ```
-❯ htpasswd -c -B -b users.htpasswd admin redhat   
+❯ htpasswd -c -B -b users admin redhat   
 Adding password for user admin
 
 
-❯ htpasswd -B -b users.htpasswd leader redhat
+❯ htpasswd -B -b users leader redhat
 Adding password for user leader
 
 
-❯ htpasswd -B -b users.htpasswd developer redhat
+❯ htpasswd -B -b users developer redhat
 Adding password for user developer
 
 
-❯ htpasswd -B -b users.htpasswd qa-engineer redhat
+❯ htpasswd -B -b users qa-engineer redhat
 Adding password for user qa-engineer
 ```
-- Create a secret called `cluster-users-secret` using the htpasswd credentails
+- Create a secret called `cluster-users` using the htpasswd credentails
 
 ```
-❯ oc create secret generic cluster-users-secret --from-file htpasswd=users.htpasswd -n openshift-config
+❯ oc create secret generic cluster-users --from-file htpasswd=users -n openshift-config
 secret/cluster-users-secret created
 ```
 
-- create an identiy provider called `cluster-users` that reads the `cluster-users-secret` secret
+- create an identiy provider called `cluster-users` that reads the `cluster-users` secret
 
 Note I like to use the web-console (as `kubeadmin`)for this step, since via the command line requires creating `yaml` file, and I can't remember the format, so GUI it is!
 
 Administration->Cluster Settings->Configuration->Oauth
 
-Identity pvoviders->Add->HTPasswd
+Identity providers->Add->HTPasswd
 
 use `cluster-users` as the name, and just type something random in the bottom window
 Add
@@ -110,19 +110,19 @@ clusterrole.rbac.authorization.k8s.io/self-provisioner added: "leader"
 - `developer` and `qa-engineer` should not be able to modify the cluster
 
 ```
-❯ oc adm policy add-role-to-user view developer -n openshift-config
+❯ oc adm policy add-cluster-role-to-user view developer
 clusterrole.rbac.authorization.k8s.io/view added: "developer"
 
 
-❯ oc adm policy add-role-to-user view qa-enginer -n openshift-config
+❯ oc adm policy add-cluster-role-to-user view qa-engineer
 clusterrole.rbac.authorization.k8s.io/view added: "qa-engineer"
 ```
 
 - No other user should be able to create a project
 
 ```
-oc delete rolebinding self-provisioner 
-rolebinding.rbac.authorization.k8s.io "self-provisioner" deleted
+oc delete clusterrolebinding self-provisioner 
+clusterrolebinding.rbac.authorization.k8s.io "self-provisioner" deleted
 ```
 
 ### Default account cleanup
@@ -189,17 +189,17 @@ group.user.openshift.io/qa created
 - The `leaders` group should have edit access to `back-end` and `app-db`  
 
 ```
-❯ oc adm policy add-role-to-group edit leaders -n back-end 
+❯ oc policy add-role-to-group edit leaders -n back-end 
 clusterrole.rbac.authorization.k8s.io/edit added: "leaders"
 
 
-❯ oc adm policy add-role-to-group edit leaders -n app-db  
+❯ oc policy add-role-to-group edit leaders -n app-db  
 clusterrole.rbac.authorization.k8s.io/edit added: "leaders"
 ```
 
 - The `qa` group should be able to `view` the `front-end` project but not `edit` it
 
-`oc adm policy add-role-to-group view qa -n front-end`
+`oc policy add-role-to-group view qa -n front-end`
   
   
   [back to main](./README.md) 
