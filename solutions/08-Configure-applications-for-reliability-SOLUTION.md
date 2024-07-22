@@ -117,4 +117,4 @@ $ oc set probe deployment probes --readiness \
 --initial-delay-seconds=2 --timeout-seconds=2
 ```
 
-  [back to main](./README.md) 
+  [back to main](../README.md) 

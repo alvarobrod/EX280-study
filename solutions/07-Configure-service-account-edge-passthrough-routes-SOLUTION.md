@@ -76,4 +76,4 @@ test with the `curl -s -k https://<URL>` command
 
   
   
-  [back to main](./README.md) 
+  [back to main](../README.md) 

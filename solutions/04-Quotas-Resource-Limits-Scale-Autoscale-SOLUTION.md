@@ -50,4 +50,4 @@ NAME            AGE   REQUEST                                          LIMIT
 project-quota   12m   configmaps: 2/2, cpu: 200m/3, memory: 40Mi/1Gi   
 ```
 
-  [back to main](./README.md) 
+  [back to main](../README.md) 

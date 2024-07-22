@@ -170,4 +170,4 @@ oc rsh sample-app-5fc755d58-bgbcc curl 10.217.0.171:8080
 ```
   
   
-  [back to main](./README.md) 
+  [back to main](../README.md) 

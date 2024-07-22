@@ -93,3 +93,5 @@ spec:
 watch oc get pod -n openshift-apiserver
 ```
 7. Create a project to make sure it works as intended and check `resourcequotas` and `limitranges` to see if present
+
+  [back to main](../README.md) 

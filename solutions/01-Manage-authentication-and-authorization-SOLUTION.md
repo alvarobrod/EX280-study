@@ -202,4 +202,4 @@ clusterrole.rbac.authorization.k8s.io/edit added: "leaders"
 `oc policy add-role-to-group view qa -n front-end`
   
   
-  [back to main](./README.md) 
+  [back to main](../README.md) 
