@@ -10,7 +10,8 @@ found here for my study purposes.
 ## Categories Covered In EX280
 
 - Manage OpenShift Container Platform   
-    [Solution](./Manage-OpenShift-Container-Platform.md) 
+    [Challenge](./09-Manage-OpenShift-Container-Platform.md) 
+    [Solution](./solutions/09-Manage-OpenShift-Container-Platform-SOLUTION.md) 
 
 
 - Deploy applications
@@ -21,40 +22,50 @@ found here for my study purposes.
   create route to service (edge?) 
 
 - Manage storage for application configuration and data  create pv->pvc ReadOnlyOnce
- 	[Challenge](./Manage-storage-for-application-configuration-and-data.md)  
-    [Solution](./Manage-storage-for-application-configuration-and-data-SOLUTION.md)  
+ 	[Challenge](./06-Manage-storage-for-application-configuration-and-data.md)  
+    [Solution](./solutions/06-Manage-storage-for-application-configuration-and-data-SOLUTION.md)  
 
 - Configure applications for reliability  (liveliness probe)
- 	[Challenge](./Configure-applications-for-reliability.md)  
-    [Solution](./Configure-applications-for-reliability-SOLUTION.md)
+ 	[Challenge](./08-Configure-applications-for-reliability.md)  
+    [Solution](./solutions/08-Configure-applications-for-reliability-SOLUTION.md)
 
 - Manage authentication and authorization  
- 	[Challenge](./Manage-authentication-and-authorization.md)  
-    [Solution](./Manage-authentication-and-authorization-SOLUTION.md)  
+ 	[Challenge](./01-Manage-authentication-and-authorization.md)  
+    [Solution](./solutions/01-Manage-authentication-and-authorization-SOLUTION.md)  
 
 - Configure network security  (edge with cert/key and maybe CA cert?)
- 	[Challenge](./Configure-service-account-edge-passthoguh-routes.md)  
-    [Solution](./Configure-service-accountedge-passthoguh-routes-SOLUTION.md) 
+ 	[Challenge](./07-Configure-service-account-edge-passthoguh-routes.md)  
+    [Solution](./solutions/07-Configure-service-accountedge-passthoguh-routes-SOLUTION.md) 
 
 - Enable developer self-service
   create a default project template with a limit range (max-min-default-request)
   make that the default setting when someone creates a new project   
-    [Challenge](./Enable-developer-self-service.md)  
-    [Solution](./Enable-developer-self-service-SOLUTION.md)  
+    [Challenge](./02-Enable-developer-self-service.md)  
+    [Solution](./solutions/02-Enable-developer-self-service-SOLUTION.md)  
   
 - Manage OpenShift operators
+    [Challenge](./10-Manage-operators.md)
+    [Solution](./solutions/10-Manage-operators-SOLUTION.md)
 
 - Configure application security  (source pod selector with deployment label and added label [name=value]) port access as well
- 	[Challenge](./Configure-application-security.md)  
-    [Solution](./Configure-application-security-SOLUTION.md) 
+ 	[Challenge](./05-Configure-application-security.md)  
+    [Solution](./solutions/05-Configure-application-security-SOLUTION.md) 
 
 - Quotas - Resource Limits - Scale - Autoscale  
- 	[Challenge](./Quotas-Resource-Limits-Scale-Autoscale.md)  
-    [Solution](./Quotas-Resource-Limits-Scale-Autoscale-SOLUTION.md)   
+ 	[Challenge](./04-Quotas-Resource-Limits-Scale-Autoscale.md)  
+    [Solution](./solutions/04-Quotas-Resource-Limits-Scale-Autoscale-SOLUTION.md)   
 
 - cron jobs in OpenShift  (at a certain time on x day of month) add service account to job?
- 	[Challenge](./cron-jobs-in-OpenShift.md)  
-    [Solution](./cron-jobs-in-OpenShift-SOLUTION.md)   
+ 	[Challenge](./03-cron-jobs-in-OpenShift.md)  
+    [Solution](./solutions/03-cron-jobs-in-OpenShift-SOLUTION.md)   
+
+- Declarative Resource Management (Kustomize)
+    [Challenge](./11-Declarative-Resource-Management.md)
+    [Solution](./solutions/11-Declarative-Resource-Management-SOLUTION.md)
+
+- Installing a Helm Chart
+    [Challenge](./12-Install-Helm-chart.md)
+    [Solution](./solutions/12-Install-Helm-chart-SOLUTION.md)
 
 ---
 
