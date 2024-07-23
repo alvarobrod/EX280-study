@@ -148,19 +148,19 @@ clusterrolebinding.rbac.authorization.k8s.io "kubeadmin" deleted
 - `leader` user will be the admin of the projects
 
 ```
-❯ oc adm policy add-role-to-user admin leader -n front-end  
+❯ oc policy add-role-to-user admin leader -n front-end  
 clusterrole.rbac.authorization.k8s.io/admin added: "leader"
 
-❯ oc adm policy add-role-to-user admin leader -n back-end 
+❯ oc policy add-role-to-user admin leader -n back-end 
 clusterrole.rbac.authorization.k8s.io/admin added: "leader"
 
-❯ oc adm policy add-role-to-user admin leader -n app-db  
+❯ oc policy add-role-to-user admin leader -n app-db  
 clusterrole.rbac.authorization.k8s.io/admin added: "leader"
 ```
 
 - `qa-engineer` user will have `view` access to the `app-db` project
 ```
-❯ oc adm policy add-role-to-user view qa-engineer -n app-db
+❯ oc policy add-role-to-user view qa-engineer -n app-db
 clusterrole.rbac.authorization.k8s.io/view added: "qa-engineer"
 ```
 ### Group management
