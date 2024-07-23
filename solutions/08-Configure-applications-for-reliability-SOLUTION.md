@@ -68,13 +68,13 @@ OK
 - Add health and readyness probes to deployment  
 From web console
 Deployments->Action-Edit Health Checks
-![screenshot](img/image8.png)
+![screenshot](../img/image8.png)
 
 add readyness probe with the `/ready` Path and click the check mark
-![screenshot](img/image9.png)
+![screenshot](../img/image9.png)
 
 add the livelyness probe with the `/healthz` Path and click the check mark
-![screenshot](img/image10.png)
+![screenshot](../img/image10.png)
   
 CLick [Save]  
 App will redeploy with probes
