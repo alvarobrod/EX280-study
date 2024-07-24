@@ -14,4 +14,6 @@ oc apply -k base/
 oc apply -k overlays/production
 ```
 
+**IMPORTANT: We have to execute this inside the Red Hat Learning environment due to the resources pointing to the example registry** 
+
   [back to main](../README.md) 
