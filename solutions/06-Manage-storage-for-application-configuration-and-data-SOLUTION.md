@@ -29,10 +29,10 @@ spec:
 
 - It is easy to do this with the GUI, otherwise, you need to create a yaml file from scratch
 Storage->PersistentVolumeClaims
-![screenshot](img/image5.png)
+![screenshot](../img/image5.png)
   
 Create PersistenVolumeClaim that binds to the created PV
-![screenshot](img/image6.png)
+![screenshot](../img/image6.png)
 
 Fill out form with the following info
 ```
